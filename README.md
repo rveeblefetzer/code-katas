@@ -81,3 +81,15 @@ From best solutions, a one-liner using .count()
 def count_sheeps(arrayOfSheeps):
   return arrayOfSheeps.count(True)
 ```
+
+## Fake Binary
+* **Module:** fake-binary.py
+* **Tests:** test-fake-binary.py
+* **Link:** https://www.codewars.com/kata/fake-binary/python
+
+Nice one-liner from best solutions:
+```
+def fake_bin(x):
+    return ''.join('0' if c < '5' else '1' for c in x)
+```
+
