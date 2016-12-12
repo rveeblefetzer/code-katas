@@ -93,3 +93,13 @@ def fake_bin(x):
     return ''.join('0' if c < '5' else '1' for c in x)
 ```
 
+## Sum of positive
+* **Module:** sum-of-positive.py
+* **Tests:** test-sum-of-positive.py
+* **Link:** https://www.codewars.com/kata/sum-of-positive/python
+
+Clear one-liner from best solutions:
+```
+def positive_sum(arr):
+    return sum(x for x in arr if x > 0)
+```
