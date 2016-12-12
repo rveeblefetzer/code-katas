@@ -57,3 +57,16 @@ def even_or_odd(number):
   return 'Odd' if number % 2 else 'Even'
 ```
 
+## Find the next perfect square! (7 kyu)
+* **Module:** next-perfect-square.py
+* **Tests:** test-next-perfect-square.py
+* **Link:** https://www.codewars.com/kata/find-the-next-perfect-square/python
+
+From best solutions, one that doesn't import sqrt from math:
+```
+def find_next_square(sq):
+    root = sq ** 0.5
+    if root.is_integer():
+        return (root + 1)**2
+    return -1
+```
