@@ -46,3 +46,14 @@ def reverse_and_mirror(s1, s2):
     return '{}@@@{}{}'.format(s2[::-1].swapcase(), swap[::-1], swap)
 ```
 
+## Even or Odd 
+* **Module:** even-or-odd.py
+* **Tests:** test-even-or-odd.py
+* **Link:** https://www.codewars.com/kata/even-or-odd/python
+
+From Code Wars' best solutions, I liked this one's use of Boolean in a one-liner:
+```python
+def even_or_odd(number):
+  return 'Odd' if number % 2 else 'Even'
+```
+
