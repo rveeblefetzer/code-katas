@@ -103,3 +103,14 @@ Clear one-liner from best solutions:
 def positive_sum(arr):
     return sum(x for x in arr if x > 0)
 ```
+
+## Convert a string to an array
+* **Module:** string-to-array.py
+* **Tests:** test-string-to-array.py
+* **Link:** https://www.codewars.com/kata/convert-a-string-to-an-array/python
+
+I was close to the top clever solution, though I added in a case of empty string, which it turns out I didn't need to do:
+```
+def string_to_array(string):
+    return string.split(" ")
+```
