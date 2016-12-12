@@ -114,3 +114,15 @@ I was close to the top clever solution, though I added in a case of empty string
 def string_to_array(string):
     return string.split(" ")
 ```
+
+## Opposite number
+* **Module:** opposite-number.py
+* **Tests:** test-opposite-number.py
+* **Link:** https://www.codewars.com/kata/opposite-number/python
+
+From clever solutions, looks like I didn't need the parens:
+```
+def opposite(number):
+    return -number
+```
+
