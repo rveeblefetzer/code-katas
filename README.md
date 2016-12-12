@@ -126,3 +126,13 @@ def opposite(number):
     return -number
 ```
 
+## Count of positives / sum of negatives
+* **Module:** count-pos-sum-neg.py
+* **Tests:** test-count-pos-sum-neg.py
+* **Link:** https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/python
+
+From clever solutions, I now know you can list separate elements in a list comprehension like this:
+```
+def count_positives_sum_negatives(arr):
+    return [len([x for x in arr if x > 0])] + [sum(y for y in arr if y < 0)] if arr else []
+```
