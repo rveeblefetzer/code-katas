@@ -16,7 +16,6 @@ def flatten_me(lst):
 * **Module:**: ones-and-zeros.py
 * **Tests:** test-ones-and-zeros.py
 * **Link:** https://www.codewars.com/kata/ones-and-zeros/train/python
-https://www.codewars.com/kata/vowel-count/train/python
 
 Good solution on Code Wars:
 ```python
@@ -33,5 +32,17 @@ Good solution on Code Wars:
 ```
 def getCount(s):
     return sum(c in 'aeiou' for c in s)
+```
+
+## String Reversing, Changing case, etc. (7 kyu)
+* **Module:** string-reversing-changing-case-etc.py
+* **Tests:** test-string-reversing-changing-case-etc.py
+* **Link:** https://www.codewars.com/kata/string-reversing-changing-case-etc/python
+
+Interesting solution using string interpolation:
+```
+def reverse_and_mirror(s1, s2):
+    swap = s1.swapcase()
+    return '{}@@@{}{}'.format(s2[::-1].swapcase(), swap[::-1], swap)
 ```
 
