@@ -70,3 +70,14 @@ def find_next_square(sq):
         return (root + 1)**2
     return -1
 ```
+
+## Counting sheep...
+* **Module:** counting-sheep.py
+* **Tests:** test-counting-sheep.py
+* **Link:** https://www.codewars.com/kata/counting-sheep-dot-dot-dot/python
+
+From best solutions, a one-liner using .count()
+```
+def count_sheeps(arrayOfSheeps):
+  return arrayOfSheeps.count(True)
+```
