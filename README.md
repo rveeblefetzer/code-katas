@@ -1,7 +1,7 @@
 # code-katas
 My solutions to katas on [Code Wars](https://www.codewars.com)
 
-## Flatten Me
+## Flatten Me (7 kyu)
 * **Module:** flatten-me.py
 * **Tests:** test-flatten-me.py
 * **Link:** https://www.codewars.com/kata/55a5bef147d6be698b0000cd
@@ -24,7 +24,7 @@ def binary_array_to_number(arr):
   return int("".join(map(str, arr)), 2)
 ```
 
-## Vowel Count
+## Vowel Count (7 kyu)
 * **Module:** vowel-count.py
 * **Tests:** test-vowel-count.py
 * **Link:** https://www.codewars.com/kata/vowel-count/train/python
