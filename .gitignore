@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#and more for tests/venvs
+lib64
+pip-selfcheck.json
+share/
+tox.ini
