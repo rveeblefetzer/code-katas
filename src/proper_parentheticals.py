@@ -91,10 +91,14 @@ class LinkedList(object):
 
 def parentheses_check(string):
     """Check if parentheticals close."""
-    revstring = string[::-1]
-    string = LinkedList(revstring)
+    parens = []
+    for char in string:
+        if char == '(' or char == ')':
+            parens.append(char)
+    rev_parens = parens[::-1]
+    parens_check = LinkedList(rev_parens)
     state = 0
-    current = string.head
+    current = parens_check.head
     while current is not None:
         if current.data == '(':
             state += 1
@@ -103,7 +107,6 @@ def parentheses_check(string):
         if state < 0:
             return -1
         current = current.next_node
-    print('this is the state:', state)
     if state > 0:
         return 1
     return 0
