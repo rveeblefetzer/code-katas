@@ -1,6 +1,16 @@
 # code-katas
 My solutions to katas on [Code Wars](https://www.codewars.com)
 
+## Sort deck of cards
+* **Module:** sort_cards.py
+* **Tests:** test_sort_cards.py
+* **Link:** https://www.codewars.com/kata/sort-deck-of-cards/
+
+The top clever answer is elegant, easily understandable and only two lines:
+```python
+def sort_cards(cards):
+    return sorted(cards, key="A23456789TJQK".index)
+```
 
 ## Proper Parenthetics
 My solution to class-assigned code kata. Function parentheses_check() takes a string
