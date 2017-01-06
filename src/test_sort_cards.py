@@ -1,27 +1,28 @@
-from random import randint, choice
+"""Tests for codewars.com kata 'sort a deck of cards.'"""
+import pytest
 
-SORTED_CARDS = 'A23456789TJQK'
-TEST_CARDS = (
-    'A', '3', 'T', 'T824Q', 'QKJ6932', 'J69327A8', 'J679J7327A8',
-    'TA8AAA24AQA', 'AAAAAAAAAAAAA', '39A5T824Q7J6K', 'Q286JK395A47T',
-    '54TQKJ69327A8', 'Q286JK395A47TQ286JK395A47T',
-    'Q286JKKKKK395AAA47TQ286JK395A47T',
-    'AAAAAAAAAAAAAQ286JK395A47TQ286JK395A47T'
-)
+TEST_CARDS_TABLE = [
+    [['A', '3', 'T'], ['A', '3', 'T']],
+    [['T', '8', '2', '4', 'Q'], ['2', '4', '8', 'T', 'Q']],
+    [['Q', 'K', 'J', '6', '9', '3', '2'], ['2', '3', '6', '9', 'J', 'Q', 'K']],
+    [['J', '6', '9', '3', '2', '7', 'A', '8'], ['A', '2', '3', '6', '7', '8', '9', 'J']],
+    [['J', '6', '7', '9', 'J', '7', '3', '2', '7', 'A', '8'], ['A', '2', '3', '6', '7', '7', '7', '8', '9', 'J', 'J']],
+    [['T', 'A', '8', 'A', 'A', 'A', '2', '4', 'A', 'Q', 'A'], ['A', 'A', 'A', 'A', 'A', 'A', '2', '4', '8', 'T', 'Q']],
+    [['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A'], ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A']],
+    [['3', '9', 'A', '5', 'T', '8', '2', '4', 'Q', '7', 'J', '6', 'K'], ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']],
+    [['Q', '2', '8', '6', 'J', 'K', '3', '9', '5', 'A', '4', '7', 'T'], ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']],
+    [['5', '4', 'T', 'Q', 'K', 'J', '6', '9', '3', '2', '7', 'A', '8'], ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']],
+    [['Q', '2', '8', '6', 'J', 'K', '3', '9', '5', 'A', '4', '7', 'T', 'Q', '2', '8', '6', 'J', 'K', '3', '9', '5', 'A', '4', '7', 'T'],
+        ['A', 'A', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8', '9', '9', 'T', 'T', 'J', 'J', 'Q', 'Q', 'K', 'K']],
+    [['Q', '2', '8', '6', 'J', 'K', 'K', 'K', 'K', 'K', '3', '9', '5', 'A', 'A', 'A', '4', '7', 'T', 'Q', '2', '8', '6', 'J', 'K', '3', '9', '5', 'A', '4', '7', 'T'],
+        ['A', 'A', 'A', 'A', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8', '9', '9', 'T', 'T', 'J', 'J', 'Q', 'Q', 'K', 'K', 'K', 'K', 'K', 'K']],
+    [['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'Q', '2', '8', '6', 'J', 'K', '3', '9', '5', 'A', '4', '7', 'T', 'Q', '2', '8', '6', 'J', 'K', '3', '9', '5', 'A', '4', '7', 'T'],
+    ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8', '9', '9', 'T', 'T', 'J', 'J', 'Q', 'Q', 'K', 'K']],
+]
 
 
-def solution(cards):
-    return sorted(cards, key='A23456789TJQK'.index)
-
-
-Test.it('Basic Tests')
-for cards_str in TEST_CARDS:
-    cards = list(cards_str)
-    Test.it(repr(cards))
-    Test.assert_equals(sort_cards(cards), solution(cards))
-
-Test.it('Random Tests')
-for _ in range(100):
-    random_cards = [choice(SORTED_CARDS) for i in range(randint(1, 100))]
-    Test.it(repr(random_cards))
-    Test.assert_equals(sort_cards(random_cards), solution(random_cards))
+@pytest.mark.parametrize("card_list, result", TEST_CARDS_TABLE)
+def test_sort_cards(card_list, result):
+    """Test sort deck return the deck in order."""
+    from sort_cards import sort_cards
+    assert sort_cards(card_list) == result
