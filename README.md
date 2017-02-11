@@ -159,3 +159,10 @@ From clever solutions, I now know you can list separate elements in a list compr
 def count_positives_sum_negatives(arr):
     return [len([x for x in arr if x > 0])] + [sum(y for y in arr if y < 0)] if arr else []
 ```
+
+## String Pyramid
+* **module:** string_pyramid.py
+* **Tests:** test_string_pyramid.py
+* **Link:** http://www.codewars.com/kata/string-pyramid
+
+From the clever solutions, user lechevalier condensed the view functions by putting index and row variables in as defaulted keyword args to the function, and then recursing: (http://www.codewars.com/kata/reviews/5799a0d426bf9ecb56000099/groups/57b321b08491f90886000970)
