@@ -24,9 +24,18 @@ def forbes_filter():
                 if moneybag['age'] < youngest_age and moneybag['age'] >0:
                     youngest_age = moneybag['age']
                     youngest_person = moneybag
-        print("oldest under 80: " + oldest_person['name'])
-        print(\t + "net worth: US$" + oldest_person["net_worth (USD)"])
-        print(\t + "industry: " + oldest_person["source"])
-        print("youngest: " + youngest_person['name'])
-        print(\t + "net worth: US$" + youngest_person["net_worth (USD)"])
-        print(\t + "industry: " + youngest_person["source"])
+    # import pdb; pdb.set_trace()
+    results = {'oldest_billionaire_under_80':
+                [oldest_person['name'], oldest_person['net_worth (USD)'], oldest_person['source']],
+                'youngest_billionaire': [youngest_person['name'], youngest_person['net_worth (USD)'],
+                youngest_person['source']]}
+    print("oldest under 80: " + oldest_person['name'])
+    print("\t net worth: US$" + str(oldest_person["net_worth (USD)"]))
+    print("\t industry: " + oldest_person["source"])
+    print("youngest: " + youngest_person['name'])
+    print("\t net worth: US$" + str(youngest_person["net_worth (USD)"]))
+    print("\t industry: " + youngest_person["source"])
+    return results
+
+if __name__ == '__main__':
+    forbes_filter()

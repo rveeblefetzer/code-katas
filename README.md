@@ -1,5 +1,5 @@
 # code-katas
-My solutions to katas on [Code Wars](https://www.codewars.com)
+My solutions to katas on [Code Wars](https://www.codewars.com) and practice problems given in Code Fellows' Python 401 class.
 
 ## Sort deck of cards
 * **Module:** sort_cards.py
@@ -159,3 +159,11 @@ From clever solutions, I now know you can list separate elements in a list compr
 def count_positives_sum_negatives(arr):
     return [len([x for x in arr if x > 0])] + [sum(y for y in arr if y < 0)] if arr else []
 ```
+
+
+##The Forbes Top 40
+A class-given practice problem. Using a JSON file with data on the world's top 40 billionaires in 2016, write a function that returns the name, net worth and industry/company from the youngest billionaire (with a valid age) and the oldest billionaire under 80.
+
+I collaborated on this practice problem with Ben Petty and Joey DeRosa. Ben first used a JSON validator and found an errant, extra comma at the end of the file; after consulting a TA and being uncertain if we should simply delete the comma, we hard-coded an if statement to delete it. Similarly, the function here looks for an returns data on the two targeted people. A good recent quote I heard is "Every data scientist worth his salt looks at the data first. You should always know what you're working with before you work with it." (our instructor, some time this week.) Having done this, I knew there there were not multiple people at the same age for either criteria, so the as the function iterates through the dictionary, it updates its oldest and youngest variables as it finds a better match.  Had I not known this, say, if the data set were much bigger than 40 entries for a quick visual scan, I'd have written the variables as dictionaries, and added each person at the current extreme age.
+
+The function stores answers in a dictionary, for an easy final return statement. The function also prints the answers to stdout if run a script.
