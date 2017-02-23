@@ -161,8 +161,15 @@ def count_positives_sum_negatives(arr):
 ```
 
 ## String Pyramid
-* **module:** string_pyramid.py
+* **Module:** string_pyramid.py
 * **Tests:** test_string_pyramid.py
 * **Link:** http://www.codewars.com/kata/string-pyramid
 
 From the clever solutions, user lechevalier condensed the view functions by putting index and row variables in as defaulted keyword args to the function, and then recursing: (http://www.codewars.com/kata/reviews/5799a0d426bf9ecb56000099/groups/57b321b08491f90886000970)
+
+## Flight Paths
+* **Module:** flight_paths.py
+* **Graph/Algorigm module:** graph.py
+* **Data file:** cities_with_airports.json
+* **Tests:** test_flight_paths.py
+A code kata from class to find the shortest path between a starting and destination airport. Data is pulled in from a JSON file and fed into a weighted graph; the main function, return_shortest_route(), uses Dijkstra's algorithm to calculate the shortest path. I did this work with [Ben Shields](https://github.com/iamrobinhood12345) using his and [Maelle Vance](https://github.com/ellezv)'s implementation of Dijkstra's.
