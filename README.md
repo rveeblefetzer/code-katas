@@ -173,3 +173,9 @@ From the clever solutions, user lechevalier condensed the view functions by putt
 * **Data file:** cities_with_airports.json
 * **Tests:** test_flight_paths.py
 A code kata from class to find the shortest path between a starting and destination airport. Data is pulled in from a JSON file and fed into a weighted graph; the main function, return_shortest_route(), uses Dijkstra's algorithm to calculate the shortest path. I did this work with [Ben Shields](https://github.com/iamrobinhood12345) using his and [Maelle Vance](https://github.com/ellezv)'s implementation of Dijkstra's.
+
+## Autocomplete
+* **Module:** autocomplete.py
+* **Graph module:** trie.py
+* **Tests:** test_autocomplete.py
+A code kata from class to implement autocomplete. This implementation uses a trie tree to store words. 
