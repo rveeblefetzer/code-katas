@@ -19,7 +19,6 @@ class Trie(object):
     Methods include:
     insert(string): Add a string to the trie.
     contains(string): Return true if string is in trie, else false.
-    size(): Return the number of words in the trie. 0 if empty.
     traversal(self, start): Traverse the graph from start.
     """
 
@@ -56,14 +55,6 @@ class Trie(object):
                 return False
         if current_node.children['$']:
                 return True
-
-    def size(self):
-        """Return the number of words/strings in the trie."""
-        return self._size
-
-    def __len__(self):
-        """Allow use of len() function."""
-        return self.size()
 
     def traversal(self, start=None):
         """Return a generator yielding words emanating from start."""
